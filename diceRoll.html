@@ -1,0 +1,32 @@
+<!---Ammaar Shaikh, Web Dev, Period 7-8 Even, Rolls 2 die and outputs their individual and total values-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function initialize(){
+            DiceRolling = document.getElementById("diceRoll")
+        }
+
+        function diceRoll(){
+            rolledDice1 = parseInt((Math.random() * 6)) + 1;
+            rolledDice2 = parseInt((Math.random() * 6)) + 1;
+            total = rolledDice1 + rolledDice2;
+            update();
+        }
+        
+        function update(){
+            DiceRolling.innerHTML = "   Dice A: " + rolledDice1 + "   Dice B: " + rolledDice2 + "   Total Roll: " + total;
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <div id="diceRoll">None Rolled</div>
+    <button onclick="diceRoll();">Roll Dice!</button>
+    
+</body>
+</html>
